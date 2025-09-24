@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Modelo de Caja</title>
+  <style>
+    body {
+      background: #eee;
+      font-family: sans-serif;
+    }
+
+    .caja {
+      width: 200px;
+      margin: 20px;          /* Espacio fuera de la caja */
+      padding: 20px;         /* Espacio dentro de la caja */
+      border: 5px solid #333;/* Borde */
+      background: lightblue; /* Color del área de contenido */
+    }
+
+    .content {
+      background: #90ee90;   /* verde = contenido */
+      padding: 10px;
+      text-align: center;
+    }
+
+    .caja-border-box {
+      box-sizing: border-box; /* El ancho total incluye padding + border */
+    }
+
+    .info {
+      margin: 20px;
+      font-size: 14px;
+      background: #fff;
+      padding: 10px;
+      border-left: 3px solid #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="caja">
+    <div class="content">Content (texto)</div>
+  </div>
+
+  <!-- Caja ajustada con border-box -->
+  <div class="caja caja-border-box">
+    <div class="content">Caja con border-box</div>
+  </div>
+
+  <div class="info">
+    <b>Colores:</b><br>
+    🔵 Azul = área de la caja (content + padding)<br>
+    🟩 Verde = contenido (texto)<br>
+    ⚫ Gris oscuro = borde<br>
+    El espacio entre la caja azul y el fondo gris = <b>margin</b>
+  </div>
+</body>
+</html>

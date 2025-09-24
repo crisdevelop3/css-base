@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo display</title>
+  <style>
+
+    body {
+      font-family: sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
+    }
+
+    .caja {
+      background: lightblue;
+      border: 2px solid #333;
+      padding: 10px;
+      margin: 5px;
+    }
+
+    /* 1. Block */
+    .bloques .caja {
+      display: block;
+    }
+
+    /* 2. Inline */
+    .en-linea .caja {
+      display: inline;
+      width: 120px;            /* NO funciona, es inline */
+      height: 80px;            /* NO funciona, es inline */
+    }
+
+    /* 3. Flex */
+    .flex {
+      display: flex;
+      justify-content: center; /* eje principal (horizontal) */
+      align-items: center;     /* eje secundario (vertical) */
+      height: 120px;
+      background: #ddd;
+    }
+    .flex .caja {
+      width: 100px;
+      text-align: center;
+    }
+
+    /* 4. Inline-block */
+    .inline-block-div .caja {
+      display: inline-block;
+      width: 200px;            /* funciona, a diferencia de inline */
+      height: 100px;            /* funciona, a diferencia de inline */
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <h2>display: block</h2>
+  <div class="bloques">
+    <div class="caja">Caja 1</div>
+    <div class="caja">Ocupa todo el ancho disponible aunque tenga contenido pequeño</div>
+    <div class="caja">Caja 3</div>
+  </div>
+
+  <h2>display: inline</h2>
+  <div class="en-linea">
+    <div class="caja">Ocupa lo que mide su contenido</div>
+    <div class="caja">No aplica width ni height</div>
+    <div class="caja">Caja 3</div>
+  </div>
+
+  <h2>display: flex</h2>
+  <div class="flex">
+    <div class="caja">Items flexibles</div>
+    <div class="caja">Caja 2</div>
+    <div class="caja">Caja 3</div>
+  </div>
+
+  <h2>display: inline-block</h2>
+  <div class="inline-block-div">
+    <div class="caja">Si aplica width y height</div>
+    <div class="caja">Caja 2</div>
+    <div class="caja">Caja 3</div>
+  </div>
+
+</body>
+</html>
