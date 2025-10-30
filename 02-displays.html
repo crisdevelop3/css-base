@@ -50,6 +50,14 @@
       height: 100px;            /* funciona, a diferencia de inline */
     }
 
+    .info {
+      margin: 20px;
+      font-size: 14px;
+      background: #fff;
+      padding: 10px;
+      border-left: 3px solid #333;      
+    }
+
 
   </style>
 </head>
@@ -81,6 +89,15 @@
     <div class="caja">Si aplica width y height</div>
     <div class="caja">Caja 2</div>
     <div class="caja">Caja 3</div>
+  </div>
+  
+  <div class="info">
+    
+    <b>Como resumen:</b><br><br> 
+    <b>Display: block</b> -> El elemento ocupa todo el ancho disponible.<br><br> 
+    <b>Display: inline</b> -> El elemento se comporta como texto. Solo ocupa el espacio justo de su contenido.<br><br>
+    <b>Display: inline-block</b> -> Es una mezcla entre inline y block. Se comporta como inline (en la misma línea que otros) pero puedes definir width, height, padding, margin. Muy útil para botones, tarjetas o etiquetas pequeñas alineadas horizontalmente.<br><br>
+    <b>Display flex:</b> Convierte un elemento padre en un contenedor flexible. Permite alinear, centrar y distribuir elementos fácilmente.<br><br>
   </div>
 
 </body>
