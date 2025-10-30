@@ -27,7 +27,7 @@
       box-sizing: border-box; /* El ancho total incluye padding + border */
     }
 
-    .info {
+    .info, .info-extra {
       margin: 20px;
       font-size: 14px;
       background: #fff;
@@ -53,5 +53,14 @@
     ⚫ Gris oscuro = borde<br>
     El espacio entre la caja azul y el fondo gris = <b>margin</b>
   </div>
+
+  <div class="info-extra">
+    Se puede observar que la segunda caja es más pequeña porque hemos puesto 
+    <b>box-sizing: border-box</b> y esto hace que el <b>width: 200px</b> ya incluya 
+    el <b>padding</b> y el <b>border</b>.<br><br>
+    En la primera caja, por defecto tiene <b>box-sizing: content-box</b> 
+    y el <b>width: 200px</b> solo mide el contenido.
+  </div>
+
 </body>
 </html>
