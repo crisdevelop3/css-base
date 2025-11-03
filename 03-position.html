@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            font-size: 3rem;
+        }
+        img {
+            max-width: 100%;
+        }
+        .box {
+            width: 400px;
+            height: 400px;
+        }
+        .image-circular {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: violet;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div style="width: 70%; margin: 0 auto; border: 1px solid red">
+        <!-- el div 1 se solapa con el 2 al moverlo con position relative y top 100px -->
+        <!-- Con position relative el navegador sigue pensando que el div 1 sigue en su sitio -->
+        <div class="box" style="position: relative; top: 100px; background-color: rgba(255, 0, 0, 0.577);">1</div>
+        <div class="box" style="margin-top: 10px; background-color: rgba(70, 131, 180, 0.516);">2</div>
+        <div class="box" style="margin-top: 10px; background-color: rgba(0, 255, 157, 0.516);">3</div>
+    </div>
+
+    <div style="width: 70%; margin: 0 auto; border: 1px solid red; margin-top: 50px; padding: 20px;">
+
+        <div class="box" style="position: relative; background-color: rgba(0, 255, 157, 0.516);">
+            <div>TEXTO 1</div>
+            <div style="position: absolute; bottom: 0;">TEXTO FUERA DEL FLUJO</div>
+            <div>TEXTO 2</div>
+        </div>
+
+    </div>
+
+    <div style="width: 70%; margin: 0 auto; border: 1px solid red; margin-top: 50px; padding: 20px;">
+
+        <div class="box" style="position: relative; background-color: rgba(0, 255, 157, 0.516);">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">CENTRO</div>
+        </div>
+
+
+    </div>
+
+    <div style="position: relative; width: 70%; margin: 0 auto; border: 1px solid red; margin-top: 50px; padding: 20px;">
+        <div class="image-circular">CRI</div>
+    </div>
+
+    <div style="position: relative; width: 70%; margin: 0 auto; border: 1px solid red; margin-top: 50px; padding: 20px;">
+
+        <div class="box" style="position: absolute; background-color: rgba(0, 255, 157, 0.516);"></div>
+        <div class="box" style="position: absolute; background-color: rgba(0, 255, 157, 0.516);"></div>
+        <div class="box" style="position: absolute; background-color: rgba(0, 255, 157, 0.516);"></div>
+
+    </div>
+
+    <div style="position: fixed; top: 0; right: 0; background-color: rgba(255, 0, 0, 0.393);">
+        DEPENDE DE LA VENTANA
+    </div>
+
+    <div style="position: fixed; top: 0; right: 0px; background-color: rgba(0, 0, 255, 0.441); z-index: 10;">
+        DEPENDE DE LA VENTANA 2
+    </div>
+
+</body>
+</html>
