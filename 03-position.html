@@ -38,6 +38,27 @@
       <div class="box" style="margin-top: 10px; background-color: rgba(0, 255, 157, 0.516);">3. Sin position relative</div>
   </div>
 
+  <h2>position: absolute</h2>
+  <div style="width: 70%; margin: 0 auto; border: 1px solid red; margin-top: 50px; padding: 20px;">
+
+      <div class="box" style="position: relative; background-color: rgba(0, 255, 157, 0.516);">
+          <div>TEXTO 1</div>
+          <div style="position: absolute; left: 85px;">TEXTO 2 FUERA DEL FLUJO</div>
+          <div>TEXTO 3</div>
+      </div>
+      <p>Texto 2 está fuera del flujo porque lo hemos movido con position absolute y con left 85px. Se mueve con respecto al padre que tiene position relative. Sino se colocaria con respecto al body</p>
+      <div style="position: absolute; left: 10px;">Soy absolute. No tengo padre relative. Me coloco segun body</div>
+  </div>
+
+  <div style="width: 70%; margin: 0 auto; border: 1px solid red; margin-top: 50px; padding: 20px;">
+
+      <div class="box" style="position: relative; background-color: rgba(0, 255, 157, 0.516);">
+          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">CENTRO</div>
+      </div>
+
+
+  </div>
+
 
 </body>
 </html>
