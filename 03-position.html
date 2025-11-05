@@ -21,8 +21,8 @@
             height: 100px;
         }
         .image-circular {
-            width: 200px;
-            height: 200px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             background-color: violet;
         }
@@ -51,12 +51,27 @@
   </div>
 
   <div style="width: 70%; margin: 0 auto; border: 1px solid red; margin-top: 50px; padding: 20px;">
-
       <div class="box" style="position: relative; background-color: rgba(0, 255, 157, 0.516);">
           <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">CENTRO</div>
       </div>
+  </div>
 
+  <div style="position: relative; width: 70%; margin: 0 auto; border: 1px solid red; margin-top: 50px; padding: 20px;">
+      <div class="image-circular">CRI</div>
+      <p>Aqui no se ha alineado el div para que CRI caiga justo en el centro como la caja anterior</p>
+  </div>
 
+  <div style="position: relative; width: 70%; margin: 0 auto; border: 1px solid red; margin-top: 50px; padding: 20px;">
+      <div class="image-circular" style="display: flex; justify-content: center; align-items: center;">CRI</div>
+      <p>Aqui SI se ha alineado el div para que CRI caiga justo en el centro</p>
+  </div>
+
+  <div style="position: relative; width: 70%; margin: 0 auto; border: 1px solid red; margin-top: 50px; padding: 20px;">
+
+      <div class="box" style="position: absolute; background-color: rgba(0, 255, 157, 0.516);"></div>
+      <div class="box" style="position: absolute; background-color: rgba(0, 255, 157, 0.516);"></div>
+      <div class="box" style="position: absolute; background-color: rgba(0, 255, 157, 0.516);"></div>
+      <p>Las cajas tienen position absolute y se superponen unas encima de otras</p>
   </div>
 
 
