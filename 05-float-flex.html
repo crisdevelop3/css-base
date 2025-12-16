@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Float vs Flex</title>
+
+<style>
+  body {
+    font-family: sans-serif;
+    background: #f0f0f0;
+    padding: 20px;
+  }
+
+  h2 {
+    margin-top: 40px;
+  }
+
+  .container {
+    border: 2px solid #333;
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 40px;
+  }
+
+  .box {
+    width: 100px;
+    height: 100px;
+    background: lightblue;
+    border: 1px solid #333;
+    text-align: center;
+    line-height: 100px;
+    margin: 5px;
+  }
+
+  /* ---------------- FLOAT ---------------- */
+
+  .float-container .box {
+    float: left;
+  }
+
+  /* clearfix (hack necesario con float) */
+  .float-container::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  
+  /* ---------------- FLEX ---------------- */
+
+  .flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+</style>
+</head>
+<body>
+
+    <h1>Float vs Flex (comparación visual)</h1>
+
+    <h2>❌ Layout con FLOAT</h2>
+    <p>
+        Los elementos flotan. El padre necesita un <b>clearfix</b> para no colapsar.
+        No hay centrado vertical real.
+    </p>
+
+    <div class="container float-container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+
+    <h2>✅ Layout con FLEX</h2>
+    <p>
+        Los hijos se alinean automáticamente.
+        No hay hacks.
+        Centrado horizontal y vertical real.
+    </p>
+
+    <div class="container flex-container" style="height: 150px;">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+
+</body>
+</html>
